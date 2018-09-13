@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+  background:url('https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA17005_hires.jpg')no-repeat center center fixed;
+  background-size: cover;
+  font-family:'Megrim', cursive;
+
+}
+
+.container {
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+.jumbotron {
+  background: #C0C0C0;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.jumbotron h1 {
+   filter: drop-shadow(0px 0px 2px black);
+   color: darkred;
+}
+
+.row {
+  margin: 2rem;
+  text-align: center;
+}
+
+.row p {
+  border: 1px solid lightblue;
+  padding: 0.325rem;
+  color: ghostwhite;
+  font-weight: 700;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  flex-shrink:0;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+}
+
+.fa {
+  transform: rotate(270deg);
+}

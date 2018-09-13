@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+	<link rel="stylesheet" href="moon.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <title>Online business-card</title>
+</head>
+<body>
+
+  <div id="container">
+    <div class="spaceman">
+      <figure>
+        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss042e292494.jpg" alt="spaceman">
+        <figcaption>Moonchild</figcaption>
+      </figure>
+   </div>
+
+    <div class="personal-info">
+      <p>Pilot, flight engineer, daredevil</p>
+      <i class="fa fa-compass" style="font-size:16px"> Umbriel, Uranus</i>
+      <ul>
+        <li>Undoubtedly I belong to space, hence I spend most of my time floating over the known and uncharted worlds.</li>
+        <li>I was born in Einstein Planitia, on Oberon.</li>
+        <li>I have been in the United Terran Expeditionary Corps (UTEC) since my graduation at the Hawking University on Mars.</li>
+        <li>I love to test new space vessels, also to build different engines.</li>
+        <li>Though I feel the most at home above, I can be very planet-bound.</li>
+        <li>I love to cook and tinker with robotics.</li>
+      </ul>
+    </div>
+  
+    <div class="contacts">
+      <p>With civilian requests you can find me here. If you have professional requests please fill the online form on the UTEC website and send it to the Aeronautics Headquarters.</p>
+      <a href="mailto:moonchild@marsmail.solar"><img src="https://raw.githubusercontent.com/Dataloren/test-repository/master/bluesp4.png" alt="email"></a>
+      <a href="social.html"><img src="https://raw.githubusercontent.com/Dataloren/test-repository/master/desert2.png" alt="social"></a>
+      <a href="insta.html"><img src="https://raw.githubusercontent.com/Dataloren/test-repository/master/green23.png" alt="other" ></a>
+      <img src="https://raw.githubusercontent.com/Dataloren/test-repository/master/spiralnew2.png" alt="content" class="myModal">
+    </div>
+      
+    <div class="modal">
+      <div class="modal-content">
+         <span class="close-button">&times;</span>
+           <div class="pw">Enter Password</div>
+           <div class="enter">
+              <input type="password" id="password" name="password"/>
+              <button id="name" value="value" type="submit">Launch</button>
+           </div>
+      </div>
+   </div>
+    
+    <div id="hiddenmodal">
+      <div class="hiddencontent">
+        <span id="close">&times;</span>
+          <h2>The Babylon-project</h2>
+          <p>This new project of ours is top secret for the time being. Your password only gives you access to the basic intelligence. If you are interested in the project in depth, you can submit your application to the Martian Headquarters.</p>
+          <span class="target">The main aim of this project is to build a permanent base on Pluto's biggest moon, Kharon, from which we can piggyback a huge spacewanderer to the closest system. 
+          We have a reason to believe, that some form of intelligence set 'foot' on that belt. We wish to make contact and exchange knowledge if possible.
+          The project only can accept experienced pilots, engineers and scientists. That part of our outer Solar System is rather unfriendly, so think twice, before you apply!</span>
+          <h5>@Moonchild</h5>
+      </div>
+   </div>
+
+   <div id="alert">
+     <div class="message">You are not authorized to see this content!</div>
+     <button class="yes">OK</button>
+   </div>
+
+ </div>
+
+<script>
+window.onload = function() {
+
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".myModal");
+var closeButton = document.querySelector(".close-button");
+
+
+function openModal() {
+  modal.classList.add("show-modal");
+  document.getElementById("password").value="";
+}
+
+function closeModal(){
+  modal.classList.remove("show-modal");
+  }
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    openModal();
+    closeModal();
+  }
+}
+
+trigger.addEventListener("click", openModal);
+closeButton.addEventListener("click", closeModal);
+window.addEventListener("click", windowOnClick);
+
+/*hiddencontent*/
+
+document.getElementById("name").addEventListener('click', function(){
+  var hiddenModal = document.getElementById("hiddenmodal");
+  var password = document.getElementById("password").value;
+  var alert = document.getElementById("alert");
+  var close= document.getElementById("close");
+
+  if(password === "bab1701ylon") {
+    hiddenModal.style.display="block";
+    modal.classList.remove("show-modal");
+  } else {
+    alert.style.display="block";
+    modal.classList.remove("show-modal");
+  }
+
+  var button = document.querySelector(".yes");
+   button.addEventListener("click", function(){
+   alert.style.display="none";
+  });
+
+  close.onclick = function() {
+    var hiddenModal = document.getElementById("hiddenmodal");
+    hiddenModal.style.display="none";
+  };
+});
+
+};</script>
+</body>
+</html>

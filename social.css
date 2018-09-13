@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+ background: url('https://solarsystem.nasa.gov/system/resources/detail_files/611_PIA01492.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Gaegu', cursive;
+}
+
+.container {
+  width: 100vw;
+  overflow: auto;
+  margin-top: 1rem;
+}
+
+.jumbotron {
+  background: navy;
+  opacity: 0.5;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.jumbotron h1 {
+  color: white;
+  filter: drop-shadow(1px 3px 0 black);
+}
+
+.row {
+  margin: 3rem;
+  text-align: center;
+}
+
+.custom-column p {
+  color: white;
+  font-size: 2.5rem;
+  border: 1px solid lightblue;
+  padding:0.325rem;
+}
+
+.signo {
+  color: darkred;
+  filter: drop-shadow(1px 1px 2px white);
+}
+
+.personal-column p {
+  color: lightblue;
+  font-size: 2rem;
+  border:1px solid white;
+  padding: 0.4rem;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+.footer p {
+  color: lightgrey;
+  text-align: center;
+}
+
+.fa {
+  transform: rotate(270deg);
+}
